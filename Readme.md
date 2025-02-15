@@ -9,8 +9,8 @@ CSS parser / stringifier.
 ## Usage
 
 ```js
-var css = require('css');
-var obj = css.parse('body { font-size: 12px; }', options);
+const css = require('css');
+const obj = css.parse('body { font-size: 12px; }', options);
 css.stringify(obj, options);
 ```
 
@@ -46,11 +46,11 @@ Accepts an AST `object` (as `css.parse` produces) and returns a CSS string.
 ### Example
 
 ```js
-var ast = css.parse('body { font-size: 12px; }', { source: 'source.css' });
+const ast = css.parse('body { font-size: 12px; }', { source: 'source.css' });
 
-var css = css.stringify(ast);
+const css = css.stringify(ast);
 
-var result = css.stringify(ast, { sourcemap: true });
+const result = css.stringify(ast, { sourcemap: true });
 result.code // string with CSS
 result.map // source map object
 ```
